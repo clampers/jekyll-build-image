@@ -1,0 +1,18 @@
+# (C) 2019 Adam C. Abernathy, LLC
+
+version: "3"
+services:
+  jekyll:
+    build:
+      context: .
+      args:
+        COMMIT_HASH: 0000000
+    ports:
+      - 4000:80
+      - 35729:35729
+    command:
+      - sh
+      - serve.sh
+    volumes:
+      - ./:/app
+    hostname: "jekyll"
