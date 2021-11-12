@@ -61,7 +61,6 @@ RUN \
         jemoji \
         github-pages \
     && gem install --no-document eventmachine --platform ruby \
-    && npm install \
     && rm -rf /root/src /tmp/* /usr/share/man /var/cache/apk/* \
     && apk del \
         build-base \
